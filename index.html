@@ -4,52 +4,60 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#080f1d">
+<meta name="theme-color" content="#08111f">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="author" content="Enzo Petrone Lopes">
-<meta name="description" content="Enzo Petrone Lopes: portfólio profissional de marketing, CRM, inteligência comercial, operações, automação e tecnologia no mercado imobiliário. Conheça experiências, projetos e competências.">
+<meta name="description" content="Portfólio de Enzo Petrone Lopes: marketing, CRM, inteligência comercial, operações imobiliárias, dados e tecnologia. Experiências, projetos, formação e resultados.">
 <link rel="canonical" href="https://enzopetronelopes.github.io/">
-<title>Enzo Petrone Lopes | Marketing, CRM, Operações e Tecnologia</title>
+<title>Enzo Petrone Lopes | Estratégia, Marketing, CRM e Tecnologia</title>
 
-<meta property="og:type" content="website">
+<meta property="og:type" content="profile">
 <meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Enzo Petrone Lopes">
 <meta property="og:title" content="Enzo Petrone Lopes | Portfólio Profissional">
-<meta property="og:description" content="Estratégia, marketing, CRM e tecnologia. Conheça minha trajetória, competências e projetos.">
+<meta property="og:description" content="Estratégia, marketing, CRM, inteligência comercial e tecnologia. Conheça minha trajetória e projetos.">
 <meta property="og:url" content="https://enzopetronelopes.github.io/">
 <meta property="og:image" content="https://enzopetronelopes.github.io/foto-enzo.webp">
-<meta property="og:image:alt" content="Fotografia profissional de Enzo Petrone Lopes">
+<meta property="og:image:alt" content="Retrato profissional de Enzo Petrone Lopes">
 <meta name="twitter:card" content="summary_large_image">
 
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"Person",
-  "name":"Enzo Petrone Lopes",
-  "url":"https://enzopetronelopes.github.io/",
-  "image":"https://enzopetronelopes.github.io/foto-enzo.webp",
-  "description":"Profissional de marketing, CRM, operações comerciais e tecnologia com experiência no mercado imobiliário.",
-  "knowsAbout":[
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Enzo Petrone Lopes",
+  "url": "https://enzopetronelopes.github.io/",
+  "image": "https://enzopetronelopes.github.io/foto-enzo.webp",
+  "description": "Profissional de marketing, CRM, inteligência comercial, operações e tecnologia com experiência no mercado imobiliário.",
+  "sameAs": [
+    "https://www.linkedin.com/in/enzopetronelopes/",
+    "https://github.com/enzopetronelopes"
+  ],
+  "knowsAbout": [
     "Marketing Digital",
     "CRM",
-    "Marketing de Performance",
-    "Operações Comerciais",
+    "Marketing Imobiliário",
+    "Customer Success",
     "Inteligência Comercial",
     "Automação de Processos",
-    "Tecnologia Imobiliária"
+    "Análise de Dados",
+    "Tecnologia"
   ]
 }
 </script>
 
 <style>
-:root{
-  --bg:#080f1d;
-  --surface:#101b2e;
-  --surface2:#142238;
+:root {
+  --bg:#08111f;
+  --bg2:#0c1829;
+  --card:#112239;
+  --card2:#162b43;
   --text:#f4f7fb;
-  --muted:#a4b2c7;
-  --accent:#90e8c4;
-  --border:rgba(255,255,255,.105);
-  --max:1160px;
+  --muted:#a7b8c9;
+  --accent:#91e9c5;
+  --accent2:#53cfa0;
+  --line:rgba(255,255,255,.105);
+  --max:1200px;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -61,235 +69,287 @@ body{
   line-height:1.7;
   -webkit-font-smoothing:antialiased;
 }
-body:before{
-  content:"";
-  position:absolute;
-  top:0;left:0;right:0;
-  height:820px;
-  background:radial-gradient(ellipse at 80% 12%,rgba(50,110,115,.18),transparent 58%);
-  pointer-events:none;
-}
 a{color:inherit}
 button{font:inherit}
-.container{width:min(var(--max),calc(100% - 48px));margin:auto}
-header{
+.container{
+  width:min(var(--max),calc(100% - 48px));
+  margin-inline:auto;
+}
+.skip-link{
+  position:absolute;
+  top:-100px;
+  left:15px;
+  z-index:1000;
+  background:var(--accent);
+  color:#07111a;
+  padding:10px 18px;
+}
+.skip-link:focus{top:10px}
+.site-header{
   position:sticky;
   top:0;
   z-index:100;
-  background:rgba(8,15,29,.93);
+  background:rgba(8,17,31,.94);
   backdrop-filter:blur(18px);
-  border-bottom:1px solid var(--border);
+  border-bottom:1px solid var(--line);
 }
 .nav{
-  min-height:82px;
+  min-height:78px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:24px;
+  gap:25px;
 }
-.logo{
-  font-size:15px;
-  font-weight:850;
-  letter-spacing:.045em;
+.brand{
   text-decoration:none;
+  font-size:14px;
+  font-weight:850;
+  letter-spacing:.055em;
+  white-space:nowrap;
 }
-.logo span{color:var(--accent)}
-.nav-links{display:flex;align-items:center;gap:24px}
+.brand span{color:var(--accent)}
+.nav-links{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:20px;
+}
 .nav-links a{
-  font-size:13px;
-  font-weight:550;
+  font-size:12px;
   color:var(--muted);
   text-decoration:none;
-  transition:color .2s;
+  font-weight:600;
 }
 .nav-links a:hover{color:var(--accent)}
-.nav-cta{
-  border:1px solid rgba(144,232,196,.45);
-  border-radius:9px;
-  padding:9px 15px;
-  color:var(--accent)!important;
+.nav-links .nav-contact{
+  color:var(--accent);
+  border:1px solid rgba(145,233,197,.4);
+  padding:8px 14px;
+  border-radius:8px;
+}
+.hero-wrap{
+  background:
+    radial-gradient(ellipse at 78% 23%,rgba(42,111,117,.19),transparent 53%),
+    linear-gradient(180deg,#0a1526,var(--bg));
 }
 .hero{
-  position:relative;
+  min-height:710px;
+  padding:110px 0;
   display:grid;
   grid-template-columns:1.18fr .82fr;
+  gap:75px;
   align-items:center;
-  gap:70px;
-  min-height:680px;
-  padding:110px 0 120px;
 }
-.kicker{
+.eyebrow{
   color:var(--accent);
   font-size:11px;
-  font-weight:800;
+  font-weight:850;
   letter-spacing:.19em;
   text-transform:uppercase;
 }
 .hero h1{
-  margin:20px 0 26px;
-  font-size:clamp(43px,5vw,69px);
-  line-height:1.095;
-  letter-spacing:-.058em;
-  font-weight:780;
+  font-size:clamp(45px,5.3vw,75px);
+  letter-spacing:-.065em;
+  line-height:1.07;
+  margin:20px 0 27px;
+  font-weight:790;
 }
-.hero h1 em{
-  color:var(--accent);
-  font-style:normal;
-}
-.hero .intro{
-  color:var(--muted);
+.hero h1 span{color:var(--accent)}
+.hero p{
   font-size:17px;
-  line-height:1.85;
-  max-width:620px;
+  color:var(--muted);
+  max-width:640px;
+  line-height:1.9;
 }
-.hero .intro strong{color:var(--text);font-weight:650}
-.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.hero p strong{color:var(--text)}
+.hero-actions,.contact-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:30px;
+}
 .btn{
   display:inline-flex;
-  align-items:center;
   justify-content:center;
+  align-items:center;
   padding:13px 22px;
   border-radius:9px;
+  border:1px solid var(--line);
+  text-decoration:none;
   font-size:13px;
   font-weight:750;
-  text-decoration:none;
-  border:1px solid var(--border);
   transition:transform .2s,background .2s;
 }
 .btn:hover{transform:translateY(-3px)}
-.btn-primary{background:var(--accent);color:#0a1b1e;border-color:var(--accent)}
+.btn-primary{
+  background:var(--accent);
+  border-color:var(--accent);
+  color:#071b1d;
+}
 .btn-outline{color:var(--text)}
-.hero-photo{position:relative;max-width:430px;margin:auto}
-.hero-photo img{
+.portrait{position:relative;max-width:440px;margin:auto}
+.portrait img{
+  display:block;
   width:100%;
   aspect-ratio:4/5;
-  display:block;
   object-fit:cover;
   object-position:center 24%;
-  border-radius:20px;
-  border:1px solid rgba(255,255,255,.14);
-  box-shadow:0 35px 90px rgba(0,0,0,.35);
+  border-radius:19px;
+  border:1px solid rgba(255,255,255,.16);
+  box-shadow:0 40px 100px #0007;
 }
-.hero-photo:after{
+.portrait:before{
   content:"";
   position:absolute;
-  inset:17px -15px -15px 17px;
-  border:1px solid rgba(144,232,196,.45);
-  border-radius:20px;
+  inset:18px -15px -15px 18px;
+  border:1px solid rgba(145,233,197,.5);
+  border-radius:19px;
   z-index:-1;
 }
-.photo-caption{
+.portrait-label{
   position:absolute;
-  bottom:22px;
-  left:-25px;
-  background:rgba(16,27,46,.95);
-  border:1px solid var(--border);
+  bottom:24px;
+  left:-22px;
+  background:rgba(17,34,57,.96);
+  border:1px solid var(--line);
+  border-radius:10px;
   padding:13px 19px;
-  border-radius:11px;
-  box-shadow:0 12px 35px #0005;
+  box-shadow:0 15px 35px #0006;
 }
-.photo-caption strong{display:block;font-size:13px}
-.photo-caption small{color:var(--muted);font-size:11px}
-.scroll-note{
+.portrait-label strong{display:block;font-size:13px}
+.portrait-label small{font-size:11px;color:var(--muted)}
+.metrics-band{
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  background:#0d1a2b;
+}
+.metrics{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+}
+.metric{
+  padding:31px 24px;
+  border-right:1px solid var(--line);
+}
+.metric:first-child{padding-left:0}
+.metric:last-child{border-right:0}
+.metric strong{
+  display:block;
+  color:var(--accent);
+  font-size:34px;
+  letter-spacing:-.055em;
+  line-height:1.2;
+}
+.metric span{
+  display:block;
+  margin-top:8px;
   color:var(--muted);
-  font-size:11px;
-  text-transform:uppercase;
-  letter-spacing:.16em;
-  margin-top:55px;
+  font-size:12px;
 }
 .section{
   padding:100px 0;
-  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--line);
   scroll-margin-top:95px;
 }
-.section-heading{max-width:780px;margin-bottom:42px}
-.section-heading h2{
-  font-size:clamp(32px,4vw,50px);
-  line-height:1.17;
-  letter-spacing:-.045em;
-  margin:14px 0 18px;
+.section-head{max-width:800px;margin-bottom:45px}
+.section-head h2{
+  font-size:clamp(32px,4.2vw,53px);
+  line-height:1.14;
+  letter-spacing:-.05em;
+  margin:13px 0 19px;
 }
-.section-heading p{font-size:16px;color:var(--muted)}
-p{color:var(--muted)}
-.two-col{
+.section-head p{font-size:16px;color:var(--muted)}
+.about-grid{
   display:grid;
-  grid-template-columns:1.2fr .8fr;
+  grid-template-columns:1.3fr .7fr;
   gap:65px;
 }
-.prose{font-size:16px;line-height:1.95}
-.prose p:first-child{margin-top:0}
-.info-panel{
-  background:var(--surface);
-  border:1px solid var(--border);
+.about-copy p{
+  color:var(--muted);
+  font-size:16px;
+  line-height:2;
+  margin:0 0 22px;
+}
+.profile-panel{
+  background:var(--card);
+  border:1px solid var(--line);
   border-radius:17px;
   padding:30px;
+  align-self:start;
 }
-.info-row{
-  padding:15px 0;
-  border-bottom:1px solid var(--border);
+.profile-row{
+  padding:16px 0;
+  border-bottom:1px solid var(--line);
 }
-.info-row:last-child{border-bottom:0}
-.info-row small{
+.profile-row:last-child{border-bottom:0}
+.profile-row small{
   display:block;
-  font-size:11px;
-  letter-spacing:.12em;
+  color:var(--accent);
+  font-size:10px;
   text-transform:uppercase;
-  color:var(--accent);
-  font-weight:750;
-  margin-bottom:5px;
+  letter-spacing:.15em;
+  font-weight:850;
+  margin-bottom:6px;
 }
-.info-row strong{font-size:14px;font-weight:600}
-.timeline{
+.profile-row strong{font-size:14px;font-weight:600}
+.experience-list{display:grid;gap:15px}
+.experience{
   display:grid;
-  gap:16px;
-}
-.job{
-  display:grid;
-  grid-template-columns:205px 1fr;
-  gap:35px;
-  background:var(--surface);
-  border:1px solid var(--border);
+  grid-template-columns:170px 1fr;
+  gap:30px;
+  background:var(--card);
+  border:1px solid var(--line);
   border-radius:16px;
-  padding:30px;
+  padding:32px;
 }
-.job-date{
-  color:var(--accent);
-  font-size:12px;
-  font-weight:750;
-}
-.job h3{margin:0;font-size:22px;letter-spacing:-.025em}
-.job .role{color:#d7e3f0;font-size:14px;margin:4px 0 16px}
-.job p{margin:0 0 13px;font-size:14px}
-.job ul{padding-left:19px;margin:0;color:var(--muted);font-size:14px}
-.job li{margin:5px 0}
-.skills-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:16px;
-}
-.skill-card,.project,.education{
-  background:var(--surface);
-  border:1px solid var(--border);
-  border-radius:16px;
-  padding:27px;
-}
-.skill-number{
-  display:block;
-  font-size:11px;
+.experience-year{
+  font-size:13px;
   color:var(--accent);
   font-weight:800;
-  margin-bottom:20px;
 }
-.skill-card h3{margin:0 0 12px;font-size:19px}
-.skill-card p{font-size:14px;margin:0}
-.tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:28px}
+.experience h3{
+  font-size:24px;
+  letter-spacing:-.03em;
+  margin:0 0 3px;
+}
+.role{font-size:14px;color:#d8e5ef;margin-bottom:16px}
+.experience p{
+  font-size:14px;
+  color:var(--muted);
+  margin:0 0 15px;
+}
+.experience ul{
+  margin:0;
+  padding-left:20px;
+  font-size:13px;
+  color:var(--muted);
+}
+.experience li{margin:7px 0}
+.grid-3{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:17px;
+}
+.specialty,.project,.education,.certificate{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:28px;
+}
+.specialty .number{
+  color:var(--accent);
+  font-size:11px;
+  font-weight:850;
+}
+.specialty h3{font-size:19px;margin:18px 0 12px}
+.specialty p{font-size:13px;margin:0}
+.tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:27px}
 .tag{
-  display:inline-flex;
-  border:1px solid rgba(144,232,196,.15);
-  background:#172b3a;
-  color:#dce9f2;
+  background:#1a3445;
+  border:1px solid rgba(145,233,197,.15);
   border-radius:99px;
-  padding:8px 13px;
+  padding:7px 12px;
+  color:#e0eaf3;
   font-size:12px;
 }
 .project-grid{
@@ -297,206 +357,257 @@ p{color:var(--muted)}
   grid-template-columns:repeat(2,1fr);
   gap:18px;
 }
-.project{padding:32px;transition:border-color .2s,transform .2s}
-.project:hover{border-color:rgba(144,232,196,.45);transform:translateY(-3px)}
-.project .type{
+.project{
+  padding:33px;
+  transition:transform .2s,border-color .2s;
+}
+.project:hover{
+  transform:translateY(-3px);
+  border-color:rgba(145,233,197,.45);
+}
+.project.feature{
+  background:linear-gradient(145deg,#194050,#112239 75%);
+}
+.project-type{
   color:var(--accent);
-  font-size:11px;
-  text-transform:uppercase;
+  font-size:10px;
+  font-weight:850;
   letter-spacing:.14em;
+  text-transform:uppercase;
+}
+.project h3{
+  font-size:25px;
+  line-height:1.3;
+  letter-spacing:-.035em;
+  margin:18px 0 13px;
+}
+.project p{font-size:14px}
+.project strong{color:var(--text)}
+.case-detail{
+  border-top:1px solid var(--line);
+  padding-top:15px;
+  margin-top:18px;
+}
+.case-detail small{
+  color:var(--accent);
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:.1em;
   font-weight:800;
 }
-.project h3{font-size:24px;letter-spacing:-.03em;margin:20px 0 12px}
-.project p{font-size:14px}
-.project .tags{margin-top:20px}
-.project .tag{font-size:11px}
-.project-feature{
-  background:linear-gradient(140deg,#173349,#101b2e 70%);
-}
-.education-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:16px;
-}
-.education h3{font-size:18px;margin:0 0 10px}
+.case-detail p{margin:5px 0 0}
+.education h3{font-size:19px;line-height:1.4;margin:12px 0}
 .education p{font-size:13px;margin:0}
-.education small{color:var(--accent);font-size:12px}
-.method-grid{
+.education small{color:var(--accent);font-size:11px}
+.cert-grid{
   display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:14px;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
 }
-.method{
-  padding:25px;
-  border:1px solid var(--border);
-  border-radius:14px;
+.certificate{padding:20px 24px}
+.certificate strong{display:block;font-size:14px}
+.certificate small{display:block;color:var(--accent);margin-top:6px}
+.volunteer{
+  background:linear-gradient(120deg,#143444,#112239);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:35px;
 }
-.method b{color:var(--accent);font-size:13px}
-.method h3{font-size:17px;margin:15px 0 8px}
-.method p{font-size:13px;margin:0}
-.contact{
-  background:linear-gradient(135deg,#193c47,#101b2e 70%);
-  border:1px solid rgba(144,232,196,.22);
-  border-radius:24px;
-  padding:65px;
+.volunteer h3{font-size:24px;margin:10px 0}
+.volunteer p{font-size:14px;max-width:850px}
+.volunteer .year{color:var(--accent);font-size:12px;font-weight:800}
+.contact-box{
   text-align:center;
+  background:linear-gradient(140deg,#19414a,#102137 72%);
+  border:1px solid rgba(145,233,197,.25);
+  border-radius:24px;
+  padding:75px 35px;
 }
-.contact h2{
+.contact-box h2{
   font-size:clamp(32px,4.5vw,55px);
+  letter-spacing:-.05em;
   line-height:1.15;
-  letter-spacing:-.045em;
-  margin:15px 0;
+  margin:16px auto;
+  max-width:780px;
 }
-.contact p{max-width:570px;margin:0 auto 26px}
-.contact .actions{justify-content:center}
-footer{
-  border-top:1px solid var(--border);
-  padding:35px 0;
-  color:var(--muted);
-  font-size:12px;
+.contact-box p{
+  max-width:620px;
+  margin:0 auto;
+  font-size:15px;
 }
-.footer-inner{
+.contact-actions{justify-content:center}
+footer{padding:35px 0;color:var(--muted);font-size:12px}
+.footer-grid{
   display:flex;
   justify-content:space-between;
-  gap:20px;
   flex-wrap:wrap;
+  gap:20px;
 }
-.footer-inner a{text-decoration:none;color:var(--accent)}
+.footer-grid a{color:var(--accent);text-decoration:none}
 a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
 @media(max-width:1000px){
-  .nav-links{gap:14px}
   .hero{gap:35px}
-  .hero h1{font-size:clamp(40px,5vw,56px)}
-  .two-col{gap:30px}
+  .nav-links{gap:13px}
+  .about-grid{gap:35px}
 }
-@media(max-width:780px){
-  .nav{flex-direction:column;align-items:flex-start;padding:17px 0}
-  .nav-links{flex-wrap:wrap}
-  .hero{grid-template-columns:1fr;padding:75px 0;gap:45px}
-  .hero-photo{width:min(100%,370px)}
-  .photo-caption{left:10px}
-  .two-col,.project-grid{grid-template-columns:1fr}
-  .skills-grid,.education-grid{grid-template-columns:repeat(2,1fr)}
-  .method-grid{grid-template-columns:repeat(2,1fr)}
-  .job{grid-template-columns:1fr;gap:12px}
+@media(max-width:800px){
+  .nav{padding:18px 0;align-items:flex-start;flex-direction:column}
+  .hero{grid-template-columns:1fr;gap:45px;padding:75px 0}
+  .portrait{width:min(100%,370px)}
+  .portrait-label{left:10px}
+  .about-grid,.project-grid{grid-template-columns:1fr}
+  .grid-3{grid-template-columns:repeat(2,1fr)}
+  .experience{grid-template-columns:1fr;gap:10px}
   .section{padding:75px 0}
-  .contact{padding:40px 25px}
 }
-@media(max-width:520px){
+@media(max-width:550px){
   .container{width:calc(100% - 34px)}
-  .hero h1{font-size:40px}
-  .hero .intro{font-size:15px}
-  .skills-grid,.education-grid,.method-grid{grid-template-columns:1fr}
-  .job,.skill-card,.project,.education{padding:23px}
-  .nav-links a{font-size:12px}
+  .hero h1{font-size:42px}
+  .hero p{font-size:15px}
+  .grid-3,.cert-grid{grid-template-columns:1fr}
+  .metrics{grid-template-columns:1fr}
+  .metric,.metric:first-child{
+    padding:20px 0;
+    border-right:0;
+    border-bottom:1px solid var(--line);
+  }
+  .metric:last-child{border-bottom:0}
+  .experience,.project,.specialty,.education{padding:23px}
+  .contact-box{padding:45px 22px}
   .section{padding:65px 0}
 }
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  *,*:before,*:after{transition:none!important;animation:none!important}
+  *,*:before,*:after{transition:none!important}
 }
 </style>
 </head>
 
 <body>
-<header>
+<a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+<header class="site-header">
   <nav class="container nav" aria-label="Navegação principal">
-    <a class="logo" href="#inicio">ENZO<span>.</span> PETRONE LOPES</a>
+    <a class="brand" href="#inicio">ENZO<span>.</span> PETRONE LOPES</a>
     <div class="nav-links">
       <a href="#sobre">Sobre</a>
       <a href="#experiencia">Experiência</a>
-      <a href="#especialidades">Especialidades</a>
+      <a href="#competencias">Competências</a>
       <a href="#projetos">Projetos</a>
       <a href="#formacao">Formação</a>
-      <a class="nav-cta" href="#contato">Contato</a>
+      <a class="nav-contact" href="#contato">Contato</a>
     </div>
   </nav>
 </header>
 
-<main>
-<section id="inicio" class="container hero">
-  <div>
-    <div class="kicker">Marketing · CRM · Operações · Tecnologia</div>
-    <h1>
-      Conectando <em>estratégia, dados e tecnologia</em> para gerar resultados.
-    </h1>
-    <p class="intro">
-      Sou <strong>Enzo Petrone Lopes</strong>, profissional com experiência
-      em marketing, relacionamento com clientes, inteligência comercial
-      e operações no mercado imobiliário.
-    </p>
-    <p class="intro">
-      Meu foco é transformar desafios operacionais em processos mais
-      eficientes, decisões orientadas por dados e soluções digitais
-      aplicáveis ao negócio.
-    </p>
-    <div class="actions">
-      <a class="btn btn-primary" href="#projetos">Explorar projetos</a>
-      <a class="btn btn-outline" href="#experiencia">Minha trajetória</a>
+<main id="conteudo">
+<div class="hero-wrap">
+  <section id="inicio" class="container hero">
+    <div>
+      <div class="eyebrow">Marketing · CRM · Operações · Tecnologia</div>
+      <h1>Estratégia que conecta <span>negócios, dados e pessoas.</span></h1>
+      <p>
+        Sou <strong>Enzo Petrone Lopes</strong>, profissional com atuação
+        em marketing, inteligência comercial, relacionamento com clientes
+        e operações no mercado imobiliário.
+      </p>
+      <p>
+        Minha trajetória reúne experiências em comunicação estratégica,
+        performance, gestão de CRM, análise de dados e desenvolvimento
+        de soluções digitais orientadas à eficiência operacional.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#projetos">Explorar projetos</a>
+        <a class="btn btn-outline" href="#experiencia">Conhecer trajetória</a>
+        <a class="btn btn-outline" href="https://www.linkedin.com/in/enzopetronelopes/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      </div>
     </div>
-    <div class="scroll-note">Explore minha trajetória ↓</div>
-  </div>
-  <div class="hero-photo">
-    <img src="foto-enzo.webp"
-         alt="Retrato profissional de Enzo Petrone Lopes"
-         width="800" height="1000" fetchpriority="high">
-    <div class="photo-caption">
-      <strong>Enzo Petrone Lopes</strong>
-      <small>Marketing, negócios e tecnologia</small>
+    <div class="portrait">
+      <img src="foto-enzo.webp"
+           alt="Retrato profissional de Enzo Petrone Lopes"
+           width="800" height="1000" fetchpriority="high">
+      <div class="portrait-label">
+        <strong>Enzo Petrone Lopes</strong>
+        <small>Estratégia, marketing e tecnologia</small>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="metrics-band">
+  <div class="container metrics">
+    <div class="metric">
+      <strong>10+</strong>
+      <span>Incorporadoras atendidas na Lopes</span>
+    </div>
+    <div class="metric">
+      <strong>~20</strong>
+      <span>Corretores apoiados na operação da Kaza Boutique</span>
+    </div>
+    <div class="metric">
+      <strong>~30</strong>
+      <span>Clientes acompanhados em projetos na Brokers Brasil</span>
     </div>
   </div>
-</section>
+</div>
 
 <section id="sobre" class="section">
   <div class="container">
-    <div class="section-heading">
-      <div class="kicker">01 / Apresentação</div>
-      <h2>Visão estratégica com execução prática.</h2>
+    <div class="section-head">
+      <div class="eyebrow">01 / Quem sou</div>
+      <h2>Visão estratégica. Capacidade analítica. Execução.</h2>
     </div>
-    <div class="two-col">
-      <div class="prose">
+    <div class="about-grid">
+      <div class="about-copy">
         <p>
-          Minha trajetória combina experiências em comunicação,
-          marketing, CRM, relacionamento com clientes e gestão de
-          operações comerciais, especialmente no setor imobiliário.
+          Minha trajetória profissional foi construída em diferentes
+          frentes da comunicação, do marketing e das operações,
+          com uma atuação especialmente conectada ao setor imobiliário.
         </p>
         <p>
-          Ao longo dessas experiências, participei da organização
-          de processos comerciais, acompanhamento de indicadores,
-          iniciativas de marketing digital, estruturação de bases
-          de clientes e implementação de ferramentas de gestão.
+          Tenho experiência no relacionamento com incorporadoras,
+          suporte a equipes comerciais, organização de processos,
+          gestão de CRM, campanhas digitais e acompanhamento
+          de indicadores de performance.
         </p>
         <p>
-          Tenho interesse particular na conexão entre negócios e
-          tecnologia: como sistemas, dados e automações podem
-          simplificar rotinas, melhorar a comunicação entre equipes
-          e apoiar decisões estratégicas.
+          Na área de tecnologia, desenvolvo projetos voltados
+          à automação de rotinas, integração de informações,
+          organização de bases de dados e construção de
+          interfaces para facilitar o trabalho das equipes.
         </p>
         <p>
-          Paralelamente à atuação profissional, estudo Relações
-          Internacionais e Administração e desenvolvo projetos
-          próprios de tecnologia aplicada ao mercado imobiliário.
+          Minha experiência anterior em comunicação institucional
+          e análise de dados esportivos complementa essa visão:
+          compreender informações, interpretar cenários e
+          transformar conhecimento em decisões e entregas práticas.
+        </p>
+        <p>
+          Paralelamente à carreira, mantenho formação em
+          Relações Internacionais e Administração, além de
+          estudos complementares em negócios, marketing
+          e tecnologia.
         </p>
       </div>
-      <aside class="info-panel" aria-label="Resumo profissional">
-        <div class="info-row">
-          <small>Área de atuação</small>
-          <strong>Marketing, CRM e Operações</strong>
+      <aside class="profile-panel">
+        <div class="profile-row">
+          <small>Posicionamento</small>
+          <strong>Marketing, CRM e Inteligência Comercial</strong>
         </div>
-        <div class="info-row">
-          <small>Especialização setorial</small>
+        <div class="profile-row">
+          <small>Setor de experiência</small>
           <strong>Mercado imobiliário</strong>
         </div>
-        <div class="info-row">
-          <small>Interesses</small>
-          <strong>Inteligência comercial, automação e tecnologia</strong>
+        <div class="profile-row">
+          <small>Atuação complementar</small>
+          <strong>Comunicação, dados e tecnologia</strong>
         </div>
-        <div class="info-row">
-          <small>Formação</small>
-          <strong>Relações Internacionais e Administração</strong>
+        <div class="profile-row">
+          <small>Projetos digitais</small>
+          <strong>Dashboards, automação e aplicações web</strong>
         </div>
-        <div class="info-row">
-          <small>Localização profissional</small>
+        <div class="profile-row">
+          <small>Localização</small>
           <strong>São Paulo, Brasil</strong>
         </div>
       </aside>
@@ -506,113 +617,180 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
 
 <section id="experiencia" class="section">
   <div class="container">
-    <div class="section-heading">
-      <div class="kicker">02 / Experiência</div>
-      <h2>Uma trajetória entre negócios, clientes e operações.</h2>
+    <div class="section-head">
+      <div class="eyebrow">02 / Trajetória profissional</div>
+      <h2>Experiências que conectam estratégia e operação.</h2>
       <p>
-        Experiências profissionais com foco em execução,
-        relacionamento, gestão comercial e transformação de processos.
+        Atuação em marketing, relacionamento, operações imobiliárias,
+        comunicação institucional e análise de dados.
       </p>
     </div>
 
-    <div class="timeline">
-      <article class="job">
-        <div class="job-date">2026</div>
+    <div class="experience-list">
+
+      <article class="experience">
+        <div class="experience-year">2026</div>
         <div>
           <h3>Lopes</h3>
-          <div class="role">Atendimento ao Incorporador</div>
+          <div class="role">Analista de Atendimento ao Incorporador</div>
           <p>
-            Atuação na interface entre incorporadoras, equipes
-            comerciais e rotinas administrativas.
+            Atuação na interface entre incorporadoras, equipes comerciais,
+            marketing e gestores, apoiando lançamentos imobiliários,
+            comercialização de empreendimentos e acompanhamento
+            de resultados.
           </p>
           <ul>
-            <li>Apoio à operação de estandes e plantões comerciais.</li>
-            <li>Acompanhamento de indicadores e relatórios operacionais.</li>
-            <li>Organização de demandas, materiais e processos comerciais.</li>
-            <li>Participação em iniciativas de marketing e geração de leads.</li>
+            <li>Atendimento a mais de 10 incorporadoras.</li>
+            <li>Planejamento e execução de campanhas de captação no Meta Ads.</li>
+            <li>Análise de leads, custos, indicadores e performance comercial.</li>
+            <li>Apoio a lançamentos, ativações e operações de stands.</li>
+            <li>Organização de relatórios, rankings e indicadores por empreendimento.</li>
+            <li>Estudos de mercado, concorrência, estoque, vendas e VGV.</li>
           </ul>
         </div>
       </article>
 
-      <article class="job">
-        <div class="job-date">2025–2026</div>
+      <article class="experience">
+        <div class="experience-year">2024–2026</div>
         <div>
-          <h3>Kaza Boutique</h3>
-          <div class="role">Estratégia Comercial, Marketing e Operações</div>
+          <h3>Kaza Boutique Imobiliária</h3>
+          <div class="role">Coordenação de Marketing e Operações Comerciais</div>
           <p>
-            Atuação na estruturação de processos comerciais,
-            gestão de relacionamento e utilização de ferramentas digitais.
+            Experiência na estruturação de rotinas comerciais,
+            posicionamento de marca, relacionamento com clientes
+            e organização de processos de marketing e CRM.
           </p>
           <ul>
-            <li>Organização e acompanhamento de bases de leads e clientes.</li>
-            <li>Gestão operacional de CRM e fluxos de atendimento.</li>
-            <li>Apoio a iniciativas de automação e integração de sistemas.</li>
-            <li>Monitoramento de processos e indicadores comerciais.</li>
+            <li>Suporte operacional e de marketing a aproximadamente 20 corretores.</li>
+            <li>Estruturação de funis, históricos e follow-ups no Loft/Vista CRM.</li>
+            <li>Consolidação de indicadores de leads, visitas e propostas.</li>
+            <li>Gestão de conteúdos, materiais e campanhas digitais.</li>
+            <li>Operação de anúncios e portfólio em plataformas imobiliárias.</li>
+            <li>Fluxos de atendimento com WhatsApp e RD Station Conversas.</li>
           </ul>
         </div>
       </article>
 
-      <article class="job">
-        <div class="job-date">2025</div>
+      <article class="experience">
+        <div class="experience-year">2024</div>
         <div>
           <h3>Brokers Brasil</h3>
-          <div class="role">Relacionamento e Estratégia de Marketing</div>
+          <div class="role">Customer Success & Marketing Strategist</div>
           <p>
-            Experiência em relacionamento com clientes,
-            comunicação e iniciativas de posicionamento e marketing.
+            Atuação em projetos de marketing, posicionamento digital
+            e relacionamento com clientes do mercado imobiliário.
           </p>
           <ul>
-            <li>Apoio à comunicação e às iniciativas comerciais.</li>
-            <li>Organização de processos de relacionamento.</li>
-            <li>Participação em atividades de marketing e posicionamento.</li>
+            <li>Acompanhamento de aproximadamente 30 clientes.</li>
+            <li>Gestão da jornada do cliente, do onboarding à execução.</li>
+            <li>Planejamento de pautas e calendários editoriais.</li>
+            <li>Produção de roteiros e materiais para redes sociais.</li>
+            <li>Participação no planejamento e divulgação do Podcast Brokers Brasil.</li>
+            <li>Análise de engajamento e indicadores de comunicação.</li>
           </ul>
         </div>
       </article>
+
+      <article class="experience">
+        <div class="experience-year">2023–2024</div>
+        <div>
+          <h3>Footstats</h3>
+          <div class="role">Analista de Insights Esportivos</div>
+          <p>
+            Trabalho com coleta, interpretação e organização
+            de estatísticas de futebol em tempo real.
+          </p>
+          <ul>
+            <li>Análise de indicadores de jogadores e equipes.</li>
+            <li>Produção de relatórios quantitativos e qualitativos.</li>
+            <li>Organização de dados para publicação e consulta.</li>
+            <li>Acompanhamento técnico e estatístico de partidas.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="experience">
+        <div class="experience-year">2022–2023</div>
+        <div>
+          <h3>São Caetano Futebol SAF</h3>
+          <div class="role">Analista de Comunicação e Marketing Esportivo</div>
+          <p>
+            Atuação na comunicação institucional e digital
+            de uma organização esportiva profissional.
+          </p>
+          <ul>
+            <li>Criação e atualização do site oficial em WordPress.</li>
+            <li>Planejamento e produção de conteúdo para redes sociais.</li>
+            <li>Redação de notícias, notas oficiais e materiais institucionais.</li>
+            <li>Cobertura de jogos, treinos e atividades do clube.</li>
+            <li>Apoio a campanhas, eventos e iniciativas de marketing.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="experience">
+        <div class="experience-year">2021–2022</div>
+        <div>
+          <h3>Infographya Comunicação Corporativa</h3>
+          <div class="role">Mídia, Clipping e Comunicação Institucional</div>
+          <p>
+            Experiência em monitoramento de imprensa e análise
+            de informações para entidades institucionais.
+          </p>
+          <ul>
+            <li>Monitoramento de notícias de abrangência nacional.</li>
+            <li>Seleção e classificação de conteúdos jornalísticos.</li>
+            <li>Produção de boletins e comunicados institucionais.</li>
+            <li>Apoio a relatórios de exposição e análise de mídia.</li>
+          </ul>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>
 
-<section id="especialidades" class="section">
+<section id="competencias" class="section">
   <div class="container">
-    <div class="section-heading">
-      <div class="kicker">03 / Competências</div>
-      <h2>Conhecimento multidisciplinar aplicado ao negócio.</h2>
+    <div class="section-head">
+      <div class="eyebrow">03 / Especialidades</div>
+      <h2>Competências integradas para desafios reais.</h2>
       <p>
-        Integro habilidades analíticas, operacionais e de comunicação
-        para desenvolver soluções conectadas às necessidades das equipes.
+        Uma combinação de habilidades comerciais, analíticas,
+        criativas e tecnológicas.
       </p>
     </div>
 
-    <div class="skills-grid">
-      <article class="skill-card">
-        <span class="skill-number">01 / CRM</span>
-        <h3>Relacionamento com clientes</h3>
-        <p>Organização de bases, acompanhamento de oportunidades, jornadas de atendimento e processos de relacionamento.</p>
+    <div class="grid-3">
+      <article class="specialty">
+        <div class="number">01 / MARKETING</div>
+        <h3>Estratégia e performance</h3>
+        <p>Planejamento de campanhas, posicionamento, segmentação, geração de leads, análise de indicadores e marketing digital.</p>
       </article>
-      <article class="skill-card">
-        <span class="skill-number">02 / MARKETING</span>
-        <h3>Marketing de performance</h3>
-        <p>Planejamento e acompanhamento de campanhas, geração de leads, análise de indicadores e comunicação digital.</p>
+      <article class="specialty">
+        <div class="number">02 / RELACIONAMENTO</div>
+        <h3>CRM e Customer Success</h3>
+        <p>Gestão da jornada do cliente, funis comerciais, qualificação, acompanhamento de oportunidades e organização de atendimentos.</p>
       </article>
-      <article class="skill-card">
-        <span class="skill-number">03 / OPERAÇÕES</span>
+      <article class="specialty">
+        <div class="number">03 / OPERAÇÕES</div>
         <h3>Inteligência comercial</h3>
-        <p>Organização de rotinas, acompanhamento de metas, análise de processos e apoio à gestão comercial.</p>
+        <p>Estruturação de processos, suporte a equipes, análise de produtos, acompanhamento de metas e rotinas operacionais.</p>
       </article>
-      <article class="skill-card">
-        <span class="skill-number">04 / DADOS</span>
-        <h3>Indicadores e dashboards</h3>
-        <p>Estruturação de informações e visualizações para facilitar o acompanhamento de resultados e operações.</p>
+      <article class="specialty">
+        <div class="number">04 / ANALYTICS</div>
+        <h3>Dados e dashboards</h3>
+        <p>Organização de bases, construção de painéis, análise de funis, relatórios gerenciais e acompanhamento de performance.</p>
       </article>
-      <article class="skill-card">
-        <span class="skill-number">05 / AUTOMAÇÃO</span>
-        <h3>Integração de ferramentas</h3>
-        <p>Exploração de fluxos automatizados, conexões entre sistemas e redução de atividades manuais.</p>
+      <article class="specialty">
+        <div class="number">05 / TECNOLOGIA</div>
+        <h3>Automação e integrações</h3>
+        <p>Desenvolvimento de fluxos no n8n, exploração de APIs, webhooks, integrações de sistemas e automação de rotinas.</p>
       </article>
-      <article class="skill-card">
-        <span class="skill-number">06 / PRODUTO</span>
-        <h3>Projetos digitais</h3>
-        <p>Desenvolvimento experimental de aplicações e soluções digitais orientadas a problemas do mercado imobiliário.</p>
+      <article class="specialty">
+        <div class="number">06 / COMUNICAÇÃO</div>
+        <h3>Conteúdo e posicionamento</h3>
+        <p>Planejamento editorial, redação, roteirização, comunicação institucional, produção audiovisual e gestão de canais digitais.</p>
       </article>
     </div>
 
@@ -620,196 +798,325 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
       <span class="tag">Meta Ads</span>
       <span class="tag">Google Ads</span>
       <span class="tag">RD Station</span>
-      <span class="tag">Vista CRM</span>
+      <span class="tag">Loft / Vista CRM</span>
+      <span class="tag">C2S</span>
+      <span class="tag">Canal Pro</span>
+      <span class="tag">WhatsApp Business</span>
       <span class="tag">n8n</span>
+      <span class="tag">APIs e Webhooks</span>
       <span class="tag">Google Sheets</span>
-      <span class="tag">Excel</span>
+      <span class="tag">Microsoft Excel</span>
+      <span class="tag">Lovable</span>
       <span class="tag">GitHub</span>
       <span class="tag">VS Code</span>
-      <span class="tag">Lovable</span>
-      <span class="tag">Canva</span>
       <span class="tag">WordPress</span>
+      <span class="tag">Canva</span>
+      <span class="tag">Photoshop</span>
+      <span class="tag">Adobe Premiere</span>
     </div>
   </div>
 </section>
 
 <section id="projetos" class="section">
   <div class="container">
-    <div class="section-heading">
-      <div class="kicker">04 / Projetos</div>
-      <h2>Da identificação de problemas à construção de soluções.</h2>
+    <div class="section-head">
+      <div class="eyebrow">04 / Portfólio e projetos</div>
+      <h2>Projetos que conectam problemas, processos e soluções.</h2>
       <p>
-        Iniciativas de tecnologia, análise de dados e melhoria de
-        processos desenvolvidas ou exploradas ao longo da minha trajetória.
+        Iniciativas profissionais e projetos próprios nas áreas
+        de tecnologia, CRM, dados e marketing.
       </p>
     </div>
 
     <div class="project-grid">
-      <article class="project project-feature">
-        <div class="type">Produto digital / Em desenvolvimento</div>
+
+      <article class="project feature">
+        <div class="project-type">Produto digital / Projeto próprio</div>
         <h3>ImobiAI Studio</h3>
         <p>
-          Projeto de plataforma voltada ao mercado imobiliário,
-          com foco na organização de imóveis, criação de materiais
-          comerciais e melhoria da produtividade.
+          Desenvolvimento de uma proposta de plataforma digital
+          para apoiar profissionais do mercado imobiliário
+          na organização de imóveis e materiais comerciais.
         </p>
-        <p>
-          A proposta é reunir funcionalidades úteis para profissionais
-          imobiliários em uma experiência digital simples e acessível.
-        </p>
+        <div class="case-detail">
+          <small>Problema</small>
+          <p>Informações e materiais comerciais frequentemente distribuídos entre diferentes ferramentas e processos.</p>
+        </div>
+        <div class="case-detail">
+          <small>Solução em desenvolvimento</small>
+          <p>Centralização de funcionalidades para cadastro de imóveis, organização de informações e apoio à criação de anúncios.</p>
+        </div>
+        <div class="case-detail">
+          <small>Abordagem</small>
+          <p>Desenvolvimento de produto, organização de interfaces e evolução incremental de funcionalidades.</p>
+        </div>
         <div class="tags">
           <span class="tag">PropTech</span>
           <span class="tag">Produto digital</span>
-          <span class="tag">UX</span>
+          <span class="tag">Lovable</span>
+          <span class="tag">GitHub</span>
         </div>
       </article>
 
       <article class="project">
-        <div class="type">Dados / Gestão comercial</div>
-        <h3>Dashboards operacionais</h3>
+        <div class="project-type">CRM / Operações imobiliárias</div>
+        <h3>Estruturação de CRM e funis comerciais</h3>
         <p>
-          Estruturação de painéis para organizar indicadores,
-          acompanhar leads e facilitar a visualização do desempenho
-          comercial e operacional.
+          Experiência na organização de processos de relacionamento
+          e acompanhamento de oportunidades comerciais.
         </p>
+        <div class="case-detail">
+          <small>Contexto</small>
+          <p>Necessidade de organizar contatos, etapas de atendimento e informações comerciais.</p>
+        </div>
+        <div class="case-detail">
+          <small>Atuação</small>
+          <p>Estruturação de funis, históricos, follow-ups, qualificação e acompanhamento de leads.</p>
+        </div>
+        <div class="case-detail">
+          <small>Ferramentas</small>
+          <p>Loft/Vista CRM, RD Station, WhatsApp Business e plataformas comerciais.</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-type">Dados / Inteligência comercial</div>
+        <h3>Dashboards e indicadores operacionais</h3>
         <p>
-          Aplicação de dados para apoiar acompanhamento de rotinas
-          e identificação de oportunidades de melhoria.
+          Desenvolvimento e organização de painéis para
+          acompanhamento de leads, visitas, propostas
+          e desempenho de operações comerciais.
         </p>
+        <div class="case-detail">
+          <small>Objetivo</small>
+          <p>Facilitar a leitura de indicadores e apoiar o acompanhamento de rotinas e resultados.</p>
+        </div>
+        <div class="case-detail">
+          <small>Atuação</small>
+          <p>Organização de bases, consolidação de informações e estruturação de visualizações gerenciais.</p>
+        </div>
         <div class="tags">
-          <span class="tag">Indicadores</span>
           <span class="tag">Dashboards</span>
-          <span class="tag">Gestão</span>
+          <span class="tag">Excel</span>
+          <span class="tag">Google Sheets</span>
         </div>
       </article>
 
       <article class="project">
-        <div class="type">CRM / Processos</div>
-        <h3>Organização de jornadas comerciais</h3>
+        <div class="project-type">Marketing / Performance comercial</div>
+        <h3>Campanhas de captação imobiliária</h3>
         <p>
-          Trabalho com organização de bases de contatos,
-          acompanhamento de oportunidades e estruturação de
-          processos de relacionamento com clientes.
+          Planejamento e execução de iniciativas de mídia
+          digital voltadas à geração de leads para empreendimentos.
         </p>
+        <div class="case-detail">
+          <small>Atuação</small>
+          <p>Segmentação de públicos, configuração de formulários, acompanhamento de campanhas e interface com a operação comercial.</p>
+        </div>
+        <div class="case-detail">
+          <small>Indicadores acompanhados</small>
+          <p>Investimento, custo por lead, captação, distribuição de contatos e resultados comerciais associados.</p>
+        </div>
         <div class="tags">
-          <span class="tag">CRM</span>
-          <span class="tag">Relacionamento</span>
-          <span class="tag">Processos</span>
+          <span class="tag">Meta Ads</span>
+          <span class="tag">Leads</span>
+          <span class="tag">Performance</span>
         </div>
       </article>
 
       <article class="project">
-        <div class="type">Automação / Tecnologia</div>
-        <h3>Integrações e fluxos digitais</h3>
+        <div class="project-type">Automação / Integrações</div>
+        <h3>Fluxos de dados e automação</h3>
         <p>
-          Exploração de integrações entre ferramentas comerciais,
-          sistemas de CRM e rotinas automatizadas para melhorar
-          a organização e circulação de informações.
+          Exploração e desenvolvimento de fluxos para
+          conectar sistemas comerciais e organizar
+          informações de clientes e imóveis.
         </p>
+        <div class="case-detail">
+          <small>Abordagem</small>
+          <p>Integração de ferramentas por APIs, webhooks e fluxos automatizados, com foco em reduzir tarefas repetitivas.</p>
+        </div>
         <div class="tags">
           <span class="tag">n8n</span>
-          <span class="tag">Integrações</span>
-          <span class="tag">Automação</span>
+          <span class="tag">APIs</span>
+          <span class="tag">Webhooks</span>
         </div>
       </article>
+
+      <article class="project">
+        <div class="project-type">Comunicação / Marketing esportivo</div>
+        <h3>Comunicação digital no futebol</h3>
+        <p>
+          Experiência em produção de conteúdo,
+          comunicação institucional e acompanhamento
+          de informações esportivas.
+        </p>
+        <div class="case-detail">
+          <small>São Caetano SAF</small>
+          <p>Gestão de conteúdos e atualização do site institucional em WordPress.</p>
+        </div>
+        <div class="case-detail">
+          <small>Footstats</small>
+          <p>Produção e organização de dados estatísticos e informações de partidas.</p>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>
 
 <section id="formacao" class="section">
   <div class="container">
-    <div class="section-heading">
-      <div class="kicker">05 / Formação</div>
-      <h2>Aprendizado contínuo e visão interdisciplinar.</h2>
+    <div class="section-head">
+      <div class="eyebrow">05 / Formação acadêmica</div>
+      <h2>Uma formação conectada a negócios e visão global.</h2>
       <p>
-        Minha formação reúne negócios, relações internacionais,
-        comunicação e tecnologia, ampliando minha capacidade
-        de analisar desafios sob diferentes perspectivas.
+        Estudos em administração, relações internacionais,
+        comunicação e gestão.
       </p>
     </div>
 
-    <div class="education-grid">
+    <div class="grid-3">
       <article class="education">
-        <small>Graduação</small>
+        <small>2026 / Em andamento</small>
+        <h3>Administração</h3>
+        <p>Faculdade HUB / Grupo Primo</p>
+      </article>
+      <article class="education">
+        <small>2026 / Em andamento</small>
+        <h3>Business Administration</h3>
+        <p>American Global Tech University</p>
+      </article>
+      <article class="education">
+        <small>Em andamento</small>
         <h3>Relações Internacionais</h3>
         <p>Universidade Paulista — UNIP</p>
       </article>
       <article class="education">
-        <small>Graduação</small>
-        <h3>Administração</h3>
-        <p>HUB Educação</p>
-      </article>
-      <article class="education">
-        <small>Formação em negócios</small>
-        <h3>Business Administration</h3>
-        <p>American Global Tech University</p>
+        <small>Formação anterior</small>
+        <h3>Jornalismo</h3>
+        <p>Universidade Presbiteriana Mackenzie — 6 semestres cursados</p>
       </article>
     </div>
   </div>
 </section>
 
-<section class="section" id="metodologia">
+<section id="certificacoes" class="section">
   <div class="container">
-    <div class="section-heading">
-      <div class="kicker">06 / Abordagem de trabalho</div>
-      <h2>Como transformo desafios em projetos.</h2>
+    <div class="section-head">
+      <div class="eyebrow">06 / Desenvolvimento contínuo</div>
+      <h2>Cursos e certificações selecionados.</h2>
+      <p>
+        Formação complementar em marketing, estratégia,
+        operações, pesquisa e ferramentas de trabalho.
+      </p>
     </div>
 
-    <div class="method-grid">
-      <div class="method">
-        <b>01</b>
-        <h3>Diagnóstico</h3>
-        <p>Entender o problema, os processos existentes e as necessidades envolvidas.</p>
+    <div class="cert-grid">
+      <div class="certificate">
+        <strong>Marketing Digital</strong>
+        <small>Universidade de São Paulo — USP · 2025</small>
       </div>
-      <div class="method">
-        <b>02</b>
-        <h3>Estruturação</h3>
-        <p>Organizar dados, objetivos, prioridades e possíveis caminhos.</p>
+      <div class="certificate">
+        <strong>The Strategy of Content Marketing</strong>
+        <small>University of California, Davis · 2025</small>
       </div>
-      <div class="method">
-        <b>03</b>
-        <h3>Implementação</h3>
-        <p>Aplicar ferramentas e construir soluções adequadas ao contexto.</p>
+      <div class="certificate">
+        <strong>Business and Marketing Strategies</strong>
+        <small>University of London · 2025</small>
       </div>
-      <div class="method">
-        <b>04</b>
-        <h3>Evolução</h3>
-        <p>Acompanhar resultados, identificar melhorias e ajustar processos.</p>
+      <div class="certificate">
+        <strong>Fundamentals of Marketing Strategy</strong>
+        <small>University of London · 2025</small>
+      </div>
+      <div class="certificate">
+        <strong>Operations Systems Excellence</strong>
+        <small>University of London · 2025</small>
+      </div>
+      <div class="certificate">
+        <strong>Research Methodologies</strong>
+        <small>Queen Mary University of London · 2025</small>
+      </div>
+      <div class="certificate">
+        <strong>Microsoft Excel 365 — Módulo I</strong>
+        <small>Impacta Tecnologia · 2025</small>
+      </div>
+      <div class="certificate">
+        <strong>Introdução à Inteligência Artificial</strong>
+        <small>Ibmec · 2026</small>
       </div>
     </div>
+  </div>
+</section>
+
+<section id="voluntariado" class="section">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">07 / Experiência voluntária</div>
+      <h2>Relacionamento e desenvolvimento internacional.</h2>
+    </div>
+
+    <article class="volunteer">
+      <div class="year">2024–2025</div>
+      <h3>AIESEC no Brasil</h3>
+      <div class="role">Global Talent Consultant — Outgoing Global Talent</div>
+      <p>
+        Atuação voluntária no acompanhamento de candidatos
+        a oportunidades de intercâmbio profissional internacional.
+      </p>
+      <p>
+        Experiência em prospecção, qualificação de perfis,
+        análise de currículos, preparação para entrevistas,
+        acompanhamento de processos seletivos e relacionamento
+        com participantes e parceiros.
+      </p>
+      <div class="tags">
+        <span class="tag">Talent Acquisition</span>
+        <span class="tag">Customer Experience</span>
+        <span class="tag">Comunicação intercultural</span>
+      </div>
+    </article>
   </div>
 </section>
 
 <section id="contato" class="section">
   <div class="container">
-    <div class="contact">
-      <div class="kicker">07 / Contato</div>
-      <h2>Boas conexões geram novas possibilidades.</h2>
+    <div class="contact-box">
+      <div class="eyebrow">08 / Vamos nos conectar</div>
+      <h2>Estratégia, colaboração e novas possibilidades.</h2>
       <p>
-        Tenho interesse em trocar experiências, desenvolver
-        projetos e conversar sobre marketing, CRM, operações,
-        tecnologia e mercado imobiliário.
+        Aberto a conexões profissionais, troca de experiências
+        e conversas sobre marketing, CRM, operações,
+        inteligência comercial e tecnologia.
       </p>
-      <div class="actions">
+      <div class="contact-actions">
         <a class="btn btn-primary"
+           href="https://www.linkedin.com/in/enzopetronelopes/"
+           target="_blank"
+           rel="noopener noreferrer">
+          Conectar no LinkedIn ↗
+        </a>
+        <a class="btn btn-outline"
+           href="mailto:enzogtf@hotmail.com">
+          Enviar e-mail ↗
+        </a>
+        <a class="btn btn-outline"
            href="https://github.com/enzopetronelopes"
            target="_blank"
            rel="noopener noreferrer">
-          Meu GitHub ↗
-        </a>
-        <a class="btn btn-outline" href="#inicio">
-          Voltar ao início ↑
+          Explorar GitHub ↗
         </a>
       </div>
     </div>
   </div>
 </section>
+
 </main>
 
 <footer>
-  <div class="container footer-inner">
-    <span>© 2026 Enzo Petrone Lopes. Todos os direitos reservados.</span>
-    <span>Marketing · CRM · Operações · Tecnologia</span>
+  <div class="container footer-grid">
+    <span>© 2026 Enzo Petrone Lopes. Portfólio profissional.</span>
+    <span>São Paulo · Brasil</span>
     <a href="#inicio">Voltar ao topo ↑</a>
   </div>
 </footer>
